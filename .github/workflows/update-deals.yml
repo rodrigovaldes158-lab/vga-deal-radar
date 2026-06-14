@@ -9,19 +9,26 @@ on:
 permissions:
   contents: write              # para poder commitear el deals.json actualizado
 
+# Evita que dos corridas (cron + manual) se pisen y provoquen un push rechazado.
+concurrency:
+  group: update-deals
+  cancel-in-progress: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # historial completo, necesario para el rebase
 
       - name: Preparar Node 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Ejecutar el robot (GDELT)
+      - name: Ejecutar el robot
         run: node tools/fetch-deals.mjs
 
       - name: Commitear si hubo cambios
@@ -31,6 +38,7 @@ jobs:
             git config user.email "actions@github.com"
             git add deals.json
             git commit -m "data: actualizar operaciones M&A ($(date -u +%Y-%m-%d))"
+            git pull --rebase --autostash origin main   # integra cambios remotos antes de publicar
             git push
             echo "deals.json actualizado y publicado."
           else
