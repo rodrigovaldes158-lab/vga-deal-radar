@@ -1,0 +1,15 @@
+<svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg" width="54" height="54">
+  <!-- Mark reduced to the two upper nodes only.
+       No background, no frame, no monogram — transparent.
+       Colours chosen to contrast on the light nav background:
+       navy lower node + teal "decision point" top node. -->
+
+  <!-- Connector between the two nodes (teal accent) -->
+  <line x1="20" y1="42" x2="41" y2="14" stroke="#14B8A6" stroke-width="2.5"/>
+
+  <!-- Lower node: navy -->
+  <circle cx="20" cy="42" r="9" fill="#0B1F3A"/>
+
+  <!-- Top node: teal ("decision point") -->
+  <circle cx="41" cy="14" r="11" fill="#14B8A6"/>
+</svg>
