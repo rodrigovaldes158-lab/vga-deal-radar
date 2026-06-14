@@ -1,0 +1,38 @@
+name: Actualizar deals.json
+
+# Corre el robot de detección de M&A y publica el deals.json actualizado.
+on:
+  schedule:
+    - cron: "0 11 * * *"      # todos los días ~11:00 UTC (07:00-08:00 Chile)
+  workflow_dispatch:           # permite ejecutarlo a mano desde la pestaña "Actions"
+
+permissions:
+  contents: write              # para poder commitear el deals.json actualizado
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Ejecutar el robot (GDELT)
+        run: node tools/fetch-deals.mjs
+
+      - name: Commitear si hubo cambios
+        run: |
+          if [ -n "$(git status --porcelain deals.json)" ]; then
+            git config user.name  "vga-deal-bot"
+            git config user.email "actions@github.com"
+            git add deals.json
+            git commit -m "data: actualizar operaciones M&A ($(date -u +%Y-%m-%d))"
+            git push
+            echo "deals.json actualizado y publicado."
+          else
+            echo "Sin cambios en deals.json."
+          fi
