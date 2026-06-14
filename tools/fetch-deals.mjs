@@ -22,11 +22,15 @@ import { readFile, writeFile } from "node:fs/promises";
 const DEALS_PATH = new URL("../deals.json", import.meta.url);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/* ---------- Fuente 1: Diario Financiero (Google News RSS) ---------- */
-const DF_RSS =
-  "https://news.google.com/rss/search?q=" +
-  encodeURIComponent('site:df.cl (adquisición OR fusión OR adquiere OR "compra de" OR "compra el" OR fusiona OR "toma control")') +
-  "&hl=es-419&gl=CL&ceid=CL:es-419";
+/* ---------- Fuente 1: Diario Financiero (Google News RSS) ----------
+   Dos consultas para ensanchar la cobertura (Google News limita los
+   resultados por feed). Se deduplican luego en main(). */
+const DF_QUERIES = [
+  'site:df.cl (adquisición OR "adquisición de" OR adquiere OR adquirir OR adquirida OR adquirido OR fusión OR fusiona OR fusionar OR "fusión por absorción" OR "se fusiona")',
+  'site:df.cl ("compra de" OR "compra el" OR "compra la" OR "compra participación" OR comprar OR comprará OR "toma control" OR "toma el control" OR "se queda con" OR "se hace con" OR OPA OR "oferta pública de adquisición" OR "vende sus operaciones" OR "vende su participación" OR "vende el" OR desinversión OR "paquete accionario" OR "joint venture" OR "M&A" OR "cierra la compra" OR "concreta la compra")'
+];
+const dfFeedUrl = (q) =>
+  "https://news.google.com/rss/search?q=" + encodeURIComponent(q) + "&hl=es-419&gl=CL&ceid=CL:es-419";
 
 /* ---------- Fuente 2: GDELT (US / Latam / Global) ---------- */
 const GDELT_REGIONS = {
@@ -138,8 +142,8 @@ function dealFromTitle(title, { date, url, source, region, country }) {
 }
 
 /* ---------- Fetchers ---------- */
-async function fetchDF() {
-  const res = await fetch(DF_RSS, { headers: { "User-Agent": "VGA-Deal-Radar/1.0" } });
+async function fetchDFQuery(q) {
+  const res = await fetch(dfFeedUrl(q), { headers: { "User-Agent": "VGA-Deal-Radar/1.0" } });
   if (!res.ok) { console.warn("DF RSS HTTP", res.status); return []; }
   const xml = await res.text();
   const items = xml.split(/<item>/).slice(1);
@@ -160,6 +164,19 @@ async function fetchDF() {
     }));
   }
   return out;
+}
+
+async function fetchDF() {
+  let all = [];
+  for (const q of DF_QUERIES) {
+    try {
+      const items = await fetchDFQuery(q);
+      console.log("  DF query →", items.length, "items");
+      all = all.concat(items);
+    } catch (e) { console.warn("  DF query falló:", e.message); }
+    await sleep(1500);
+  }
+  return all;
 }
 
 async function fetchGdelt(region, cfg) {
