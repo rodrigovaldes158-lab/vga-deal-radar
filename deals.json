@@ -1,10 +1,58 @@
 {
   "service": "PPA",
-  "generatedAt": "2026-08-08",
+  "generatedAt": "2026-08-09",
   "note": "Diario Financiero (M&A) + GDELT + operaciones curadas. Ver Investment Banking Report (Landmark + DF) en la app.",
   "deals": [
     {
-      "id": "cl-1v80q9i",
+      "id": "cl-1q0i14j",
+      "date": "2026-08-09",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Habla Cristián Camus: la salida de Información Privilegiada, su nuevo programa y la ruta personal",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Habla Cristián Camus: la salida de Información Privilegiada, su nuevo programa y la ruta personal",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdnN4RkZqTVBfaDdpRDhOd0d2eDJPQkpWTHRtQWI2ajNFSm5PQl9WandPVnVJSEVxZEROY1RKeHJ0NWVyeFVBSFBLcDNzSXhzMXhCQkZLM3dIb3NTT3Jac2VBWVdJQ1lIZUFWZWk0NE9KOEkyVUxvc3FZSmlDdjdPY3RITWF2U3c4SjdBTXEzN1pJYkk0MjAzQWFQZ1pGMUdMbElyZA?oc=5"
+    },
+    {
+      "id": "cl-qhsjpc",
+      "date": "2026-08-09",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Andrés Awnetwant vendió dos empresas y ahora quiere vender las de otros",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Andrés Awnetwant vendió dos empresas y ahora quiere vender las de otros",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNY2dXZDA5VnNEZVVCTkxhMktJeUIxazNES2x6NFh6MFMxSDgwVWlzLXZEV0NXWVZsTlZMZjNlTlFrQlRtZFp4aXp4Z1hXVWRTYk12cjZMS0dibEVQczJzRUFtVG5KNG1nOFJnUFluN3dxM1Q4U3d5YzRlcFdqUUFmNjFjS2lJbXdpcTRaVXN2YlhIZzVmN09nNmZaQTFXTF9adDRjc2QwbU55d1Q2bVU0Yjk5UQ?oc=5"
+    },
+    {
+      "id": "us-1esiuhl",
+      "date": "2026-08-09",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Nuevo socio, mandato a BTG y quinto fondo: los próximos pasos de 12ten en EEUU",
+      "country": "Chile",
+      "region": "US",
+      "sector": "",
+      "value": null,
+      "summary": "Nuevo socio, mandato a BTG y quinto fondo: los próximos pasos de 12ten en EEUU",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU1VyMmZYYUlCMEpOV3FraXFpRWw4VVM4VHREZE9DQWJzYTh5ZS1lWGJILXVybzJGMkJiYnp4SVhxRG5ST2xtd19yanZzN1FIQmU5V2FsbVlDUnI4NkFZNGl0b0RTUU9VcGZZR2dMV2RjTGl5cHhOQ2tWRjE5LUJhUWZxSHBKYnUzbjd4WTNjQUNBQjJDYm5CSzN0V0lrSV9XZkozU05MdHpjRTA?oc=5"
+    },
+    {
+      "id": "cl-hq329s",
       "date": "2026-08-07",
       "approxDate": false,
       "auto": true,
@@ -17,7 +65,23 @@
       "value": null,
       "summary": "Holding canadiense Runtime compra startup chilena Elipse.ai",
       "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNNVRobktNaG1TX1hKMGdocFdCeVhCYVJ6T195ejdMM2JIZ2V3REdnMTVVZk1fNEVodk1wSnUxOFAxeERuOVZESGZYYTNNaTE5VFZ2WXc3ZzdNU0pJWEdXQkNiSzZYTDRoalNFcVNLRjJKbV9neXloVS10WU1lMjZUS2hrSlJzUExETGdrRDRhME1oc21ZZzJxQVM1bGIzdGY0?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOaG4yRkdNdjFtRVZHYjJQb0wwSFUxYWhaUGRWOXNSOEpwYk5OblA4eENZbEdVTURRQ0loV3RmYzcxeWVMeThUWXNyUzlzZ21uNUU4eTFUNmV2cEJGSWJhbDI2S2dCWjBuYWFnQWk0RnJzRm9xdkVvbUFibTFyaE1IRmlzVWRwUXkyT2VJU2lvMGFBUHRaTWFTSFdZLW5SUQ?oc=5"
+    },
+    {
+      "id": "cl-8026po",
+      "date": "2026-08-07",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Las claves tras el creciente apetito por invertir en los campos agrícolas de punta en Chile",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Las claves tras el creciente apetito por invertir en los campos agrícolas de punta en Chile",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdWt2OTJlelY2alJaUF9kM0lGby1sYVktblBMZlNXQllqY25YOXRDMm9tcExGZFFMN0U5QnFMdWh5TnR2Vl9VUi1JQ3B4LTFNU3owZ3dmbmxLaWZBZ0paZ0dkbFBQUVZhX3RfSm5WT3Jna0RhTUp3Q1J1ZkdtRVVmbXJMU1h3VXhIVnQzR2dhMk5Nd2RDXy0xR2FGR25IcHJWNWlTZ2FsejFWeVBO?oc=5"
     },
     {
       "id": "cl-8tgub3",
@@ -82,38 +146,6 @@
       "summary": "Quinto día de formalización del caso Sartor: audiencia se extenderá hasta mediados de la próxima semana",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNb1ZWQ1JONlBLZkVyTm9EV2p1QXc2emp6NnhRM3lMdmUxaTJKcnVXMERqYlZ6QlpzQnlndmNXRExyOTEtZ1hmU1h0RGhmMHNWTGU3ckhMUUIzTWNVSjlqeHUzc3ppamkwNTVyUFdWNDI0bHRGWllRMDVhVUl5Qm1sMkNNZU9zd1VtZjlCc25DU2FtUFdGZm1oekxfUEtXNVlMaHh3dk9Ndy1LZFR1elVjWEVweVVKZEk?oc=5"
-    },
-    {
-      "id": "cl-1cls2xy",
-      "date": "2026-08-06",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Coquimbo acelera trabajos de recuperación del borde costero afectado por temporales para reactivar el turismo antes de Fiestas Patrias",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Coquimbo acelera trabajos de recuperación del borde costero afectado por temporales para reactivar el turismo antes de Fiestas Patrias",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVEVPUjdYME56YXpNTl9mX1gxT0NCZFMxenJPLVlXc2l6UTBVeVhaV0RnYzIxZGk2M2owMWNWM210UllXTFJQbk5FQ3ZZQVJmd3o4UkktN2cwT2xuaEx5TE1iZmN5eHJnZHVRZXhqMHV4Z3ppa3FucjY1ZVpSMnRZdkh4ckx0WG1SVlJodUhWTXYtbDd0SEdUQjR4aTZ5YjE5bGotV0thaUJXanBtLUtsbg?oc=5"
-    },
-    {
-      "id": "cl-jhi15a",
-      "date": "2026-08-05",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Cenco Malls aumenta 27,9% su utilidad en el segundo trimestre y alcanza los 37 millones de visitas",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Cenco Malls aumenta 27,9% su utilidad en el segundo trimestre y alcanza los 37 millones de visitas",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNT3BEd0VUOUROWktFYnN1czlDUmVoRm5fUG43a01HZmdBVVFUenV5YjBSVzBoSVlXZDZhU0Zpby1jV0lwMmkwNzlhQnZKRDgydzJqWS1ySkttS0NZN1FWNVBxTmVEVDRsN3k2X3FxLWx1TzNKVHZVWFc1enZvQ3ZRZ2pOZ0RGNUhfYWpkYTBHbTZwdGdNUjlXXzI5TER5WGg3cG1tYldvSEdDRnZE?oc=5"
     },
     {
       "id": "cl-pr871x",
@@ -194,6 +226,22 @@
       "summary": "SNA y CChC reordenan el mapa radial: sellan la fusión entre Agricultura y Pauta",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNcHVJMGpneUFfS1Z1WlVSNmF1Y3dKdFoxN1NackJ3YnM0Z0g1TTRHek1nOUV0MUtnTUVwTThsc3BkLUd3YXdrQTd0cUVIQlF5RG54VlpYMUllZ3FjZE1hRlRuZkNOWUlhNFMxVmQ2M2NqM2hVbVFMYnJYdVZBanRZOE91ZUV6cGtXanpPWjJ4dUF5dEpaMTJJUmVnOFlsTmtKbUlhb0JiNFd1T0pueVE?oc=5"
+    },
+    {
+      "id": "cl-y899z7",
+      "date": "2026-08-03",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "6829",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "6829",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE91d0x4aklXZVJJLXBSUUN2cFZBLU5yUFNPc1IteHN2QXFMeG9yRHBTakNlQ1FEVnFORlZlejM4VGlmaUo0ZVYwSTl0bnVhenQ4bUJzOVFvaWFCSnBsWHBteGpUbUQtZ2VlYVJudDZDSUowbk5rdVQ2LQ?oc=5"
     },
     {
       "id": "cl-10nqui1",
@@ -290,70 +338,6 @@
       "summary": "6830",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9uRS1lMUxGMDF1RzE3R1J1RUYySU5pZW12cUdxcndORUVFOGRnVF8tM1BCUElwVWpqNkZuUnFTOEh1dm9pR0ZrLUFaTHR5VnFwd19NS1gta2g5ck5ScVBKcHBoZmh5WGJCZURlMXBlbWxMbVdhcksydw?oc=5"
-    },
-    {
-      "id": "cl-1nt2wii",
-      "date": "2026-08-02",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "6804",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "6804",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE45bzZMU0NyZ3Y5UTF4dFUyZW1xNEJaQmRNdk1MQmk1TTB0dy1SNjRKWWhUZndnTTdCc3cwZ1Q1MXNEY0lYMERKVFBnOURYYjBFVU5ETVpva0Ftb0JGZjZQemdiZ2cza1RRRWZtd0hiellnZDVTUXVIYg?oc=5"
-    },
-    {
-      "id": "cl-obo2f6",
-      "date": "2026-08-02",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Pedro Pablo Larraín: Las redes y negocios que creó el “sastre” que ahora enfrenta a la justicia",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Pedro Pablo Larraín: Las redes y negocios que creó el “sastre” que ahora enfrenta a la justicia",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZ0kwU1psMEtVQWNHTTBLTVdycGstTDJxcFlPeTUwOG10akxaOEUtbWVqRUFra0IwYnNKbTlDbVVTWWktNDhkT2dvb1hfQ25PVno1Z3lTNkNDalcwOFhwTkNwYnN4RWhVV2piVzZPZEFqZFBJQ1NQdEdlWkpERmViU1UzOWx0VS0tSlFWaTM0R2ZCbHQzTk0tekE4NDRpX0I2c2h3aWJZaks?oc=5"
-    },
-    {
-      "id": "cl-1ykyny8",
-      "date": "2026-08-02",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Cómo cayó en desgracia Leopold Aschenbrenner, el “niño prodigio” de la IA",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Cómo cayó en desgracia Leopold Aschenbrenner, el “niño prodigio” de la IA",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWXpKZGNDbHV1MFpoajNUanFkaVQwaDUwbTRQSTFiQk9FRnNjRG14clJuNGlRdHR4VVUxeFR0MnZxQy1wSWVPZk11Tk11U1NFb291X2dHWVh1amVHZWtSNVYwdW1FZHZWbV9XZGFjRi1ybnB0YmlhTkFWNHRTZExFQmIyU0hiRTRtM3huWHVPUFNFdWVQdVhSQlVabU9rU0RMNzdEVQ?oc=5"
-    },
-    {
-      "id": "us-1prgizd",
-      "date": "2026-07-31",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Cinco claves de la ventana de negociación arancelaria entre Chile y Estados Unidos",
-      "country": "Chile",
-      "region": "US",
-      "sector": "",
-      "value": null,
-      "summary": "Cinco claves de la ventana de negociación arancelaria entre Chile y Estados Unidos",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPY3h0RlBvMFhsRXZ4dzJJR3BiVk5UaFRtYjRlM0ZjTzg4Y2ZGSEFnei1BcFNRZmdsMTdBblZqWm1xRWRhVTlOSXVLUjZHVXBETm55akFQMkdrRElGQm11VEhKTnF6LTdSc2dkaEJEVFgxNjU1WW5CTlpGc2dBdGNLWFktTjdhMlNJbHFpX1dDVzVOM3lHOGtPRWljOEh4QXozQjNvYXJWeTRKcm1kYWF4aE5wSlBjbjk2eDNZ?oc=5"
     },
     {
       "id": "latam-183v6e4",
@@ -516,6 +500,22 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaGZka1FOY0x6VHRTWG5lVDNzeDNWVnJrRXBiSnJTR1VCOFZLM19sek41U0k0YUZxZEtfSExoTE5qSWtLdFFaeV9XdnYwb3EtTmtjSmszajFKZWlid2tGYTU5RUxyNU5ncVdSWkNKamttcDVTUkNuNjVsblBaSGdhTGxZdFZNVklPcFVKdW9FVUFYelA1V2lCQ3hYOGJUd3BBUjl2U052ZUhEZw?oc=5"
     },
     {
+      "id": "cl-iwcwic",
+      "date": "2026-06-11",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Comprar para arrendar todavía es negocio en regiones y Antofagasta lidera entre ciudades donde la renta de una vivienda aún paga el dividendo",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Comprar para arrendar todavía es negocio en regiones y Antofagasta lidera entre ciudades donde la renta de una vivienda aún paga el dividendo",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTWQzV05oN2ZldFVWSG5MTlZ6MS0tV2RfaEV4WWVGN3BnaUFKYVpNTkpuVmtsRWlveXZObnZsdGFINlJwUWEtWEdJYzNsTW9QSGg2V0V6RHVuN0Jod1RoMkEtVXQtSUdUZF9mZjZHMGtMZHMtQjZ3MHRWTWxYRl9uZjRTTDZCeXRHdFZ0R25XaDd6dEFxclJ5NmhmYllxZE1XZ2xKMXBXY0c0Wm16cDVuenFDRQ?oc=5"
+    },
+    {
       "id": "cl-zyz22q",
       "date": "2026-06-01",
       "approxDate": false,
@@ -560,6 +560,38 @@
       "summary": "AIG acordó adquirir las operaciones de seguros de Everest en Colombia, ampliando su presencia en el mercado asegurador latinoamericano.",
       "source": "Prensa / TTR Data",
       "url": "https://news.google.com/search?q=AIG%20Everest%20Colombia%20insurance%20acquisition%202026"
+    },
+    {
+      "id": "cl-12xct8",
+      "date": "2026-05-29",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "FNE da luz verde y Toesca entra en última etapa para",
+      "target": "de Frontal Trust a Andrés Echeverría",
+      "headline": "",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "FNE da luz verde y Toesca entra en última etapa para compra de Frontal Trust a Andrés Echeverría",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOalNVbkJRNGFYcTdWb19RQUMwYXQ3akJfRDU5dExQVURPLWFIVFpLOFBEMnZZcGF1XzlJc1VZeWQzUDNnR0VaOENQNjU4UHJkbVAtU05xMW10T1daOEV6OVIteVNKZHVaNklVY0ptVnBsajMxZmVFVEQ5YVVvcVlUREN3OHJPNXVfTkgzRWZCMHYtTG52bkNENGVnV0hmNF8xdjdsNmhqMmFweTRoVWwxVHNpeVV4NVYt?oc=5"
+    },
+    {
+      "id": "cl-1mpw8vu",
+      "date": "2026-05-26",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Caso Sartor: fondo ligado a Kiblisky financió OPA fallida de Clark y compra de acciones de Azul Azul por parte de Correa",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Caso Sartor: fondo ligado a Kiblisky financió OPA fallida de Clark y compra de acciones de Azul Azul por parte de Correa",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUVk1T2xkaTF0M2dGb1BwSkJMU1Vmb29qc0w4eFhpd2pSV3VLbm1MUlExTHlwdEpYSkptbF8wTk4wQ29sNVlDQUR6ZkZieF9YV0lBS09qcXFLc0hmV2tEemFldWpONU40SXU1SlNTQ0VKUklrOGxZUEQxVWtvdm1qTloydU80UzQwamYteUNORGQ1QW9WOC1RNUFEZFVSMXhSRzVGYWtLNENuOVdhLUl4NVFHUERLcmM3bzZjY1p3?oc=5"
     },
     {
       "id": "latam-mguh8z",
@@ -824,6 +856,22 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOR0xCdnVXdlZOZHkweXdlQzJ6MWlzbmdOZ2o4V2tlSGhfeU1HY1B4VnRzcFl1ak95dEJhS244ckJWWmNsTV91QUNBdEZodXAtMUE3QU91Z2h2MDdKU2RsZzIwbmtnbWJTSS1wRndsaVJsR2lUMWxnZnl5Y2ZZMVkwNlJuSGdsdUhJVVdJX3FFd3cyb2FvenhfVl9Qcw?oc=5"
     },
     {
+      "id": "cl-15wlnex",
+      "date": "2026-03-31",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Scotiabank se baja de la carrera por comprar Transbank y red de adquirencia se queda sin ofertas",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Scotiabank se baja de la carrera por comprar Transbank y red de adquirencia se queda sin ofertas",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPX1lBX0tFaXlnV1AwTGVTVVZLdUVhNkd5Q2FpZHh6RG11anJmdW8tdHg0blpKSy1xQUcweFlaNmhxWlFkRWtBRWdwZ3BGME00LWhzX3pucGxTSDhRR1lWaFJJVTRVajhDUE1wRlE4U1lnNHJmSW1wbGVxUjYwdnNXX2xfOWh4U1VDSVl4ZmVrUG5TTy03RXluV00zWmwtbGtGcGh1bzR2MTUwVmFTQlNOR3RQVkdKdzA?oc=5"
+    },
+    {
       "id": "cl-nsch53",
       "date": "2026-03-27",
       "approxDate": false,
@@ -990,22 +1038,6 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcmQ5T2VlQ0ZmR3F5MFlsYVMtaTRCbmRlT2s4LWRabFJrVTk4WVZKY2JRZGxZLTdTR3JGTVZQalR4Q2xWdW9QNWQ5ejAwVThTLVp0ZDR1QTkycUF5Y2pSUjR4MW1SRGgzNS0xQml0Y3ZWd2R3WE13ZFhHTld3a3VLT1ZSa1dZUDNZWVAxNGhVVmdGMVlqMHB3WGx2d3R6TEtvbzRDRF9QRmFQWHJ6WGw1eW9n?oc=5"
     },
     {
-      "id": "cl-lcjle5",
-      "date": "2026-02-23",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Mosa sube 2,75% su participación en Blanco y Negro tras la OPA con la que no consigue el control de la sociedad",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Mosa sube 2,75% su participación en Blanco y Negro tras la OPA con la que no consigue el control de la sociedad",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPLU0zWXV2MWIwQVQzODE2NkxQaWJlTV9Pc1VIcWVSMUZLTWhYQ3BneWRpLXlHUFlVMzM0aHhOOXBaMndWZ1ZvMnJsWERsdE1TdzBuQ2NLMjBGNGV6eUpiUUpQTk9NTkQycTZfY2pFbklQZHl3bFRwck81VTRmSTFsSUlPU1pYejFwVXpoT3dHZ0xvakZpYUEzTkZ3VnByZnNEa2VkdzBLZDJRdGhYLXlpaWl3?oc=5"
-    },
-    {
       "id": "cl-1w7mzbh",
       "date": "2026-02-20",
       "approxDate": false,
@@ -1112,22 +1144,6 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOT05odG1GakxiRTNpOVdKVXM5RXlINU81MnNhekhDQ0FNYUs0b044d2tKSG42ZHczMGJNS2U4el8xVXJjUXI3eVJCcnlJaW1RWEpObEVuR1F3cjM3RHZNb3g4V3dXaWU1dWwzLXNVLWJ6Q1dfYVkxQW5yNFE0ZDM0MGp5b3NvTHRDc3NyX3dsOXRXc2RzdVE?oc=5"
     },
     {
-      "id": "cl-1nldhkw",
-      "date": "2026-01-20",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Venta de Transbank entra en recta final: Scotiabank toma la delantera para cerrar compra",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Venta de Transbank entra en recta final: Scotiabank toma la delantera para cerrar compra",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWUkzN2hyOGZWOXdKWGFMeWVieEp1ZkQ2dlFaQXhtajdnRHdPQmtvRmdlSUlTelFmbkttenh6NktCbFhPc3pKU05pWFc3RjBUd1h1YWFVMnZaS19YV3JrY0hrWE5iMlVEMjlEMVV1dHBMdC1mT1VUNk9QeUNOd0NhSTc0ZzZ6QjM2Ymt5VFF2VGhfTVZKR0J0NDNESFE3T0RPZWk3UVJCZVpBVVFyb3pIQ0NR?oc=5"
-    },
-    {
       "id": "chart-flowserve-2026",
       "date": "2026-01-20",
       "approxDate": true,
@@ -1156,6 +1172,22 @@
       "summary": "CEO de Santander Chile tras compra de rentas vitalicias a Principal Vida: “Es un negocio altamente competitivo”",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaFVjQTVKWjVCUk1nSDBJOC1ZOS0xeXVBMFotZC1QZzNaZExZVGk2cEpTOE5JYUFJUFdNa3IwTE83SHNlS3RGbDZxeWIwaG5OXzVRSDVIcXpPX1AxRjZaemVEcHlOYmFvcGRRTFFGREluWk9DQkhxVmRKbEdUWmRlbEprSUtNTldQOEZyMm5KZ2FCaFQ0QXJTMTRVTFdNbm5NeEp3?oc=5"
+    },
+    {
+      "id": "cl-8r9sql",
+      "date": "2025-12-16",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "Klap tiene nuevo dueño: Itaú Chile acuerda la",
+      "target": "por $40 mil millones",
+      "headline": "",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": "$40 mil millones",
+      "summary": "Klap tiene nuevo dueño: Itaú Chile acuerda la compra por $40 mil millones",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWVRraVJVSjF4SzJLemtISzdKMDZnY0VYZFVTMG9JVUlHM1pvXzRSa0wyYWNSU2tpM2xmT2NTdkdjS2UtUnZlZzh4ZEpHQlJGT2dRenpzRDN0Yzg0clFQNmNmNUNhRXlwV0llUFVKZ0tIcEJzOFptVExFMktjSks3MDN0dEdfZlZuaFdmZ1B2ZDV6Zmw3ZE4xZmNrai00NWphWUdEMTVhRVVBeDZlNkt6RjN3?oc=5"
     },
     {
       "id": "cl-pxqld0",
@@ -1270,22 +1302,6 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOeS1nOVFHODJTT0NWWExDemJydE9zLTlPbUlPR1FMYjFXN0FlWEJfT2dWZkpUUlJRSHlfUlJpYVdEdm81WlBwNF9oUEpqRmtCcmNueE5kbFVvQUN4WktRdjQtMVd3X3EzZEN2V1ZrN04waDNHam9zZ1puZlN6Q1d6NF9xZWRVWWVPbFpYS2hRX2ROSW4yblQ4YWFpWDNOWUxHSjM1QW9VZTR3QVR5NmJzS08xUWVSY0NHSEE?oc=5"
     },
     {
-      "id": "latam-gi3oct",
-      "date": "2025-12-01",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Firma brasileña se queda con la operación de Banmédica en Chile y participaciones en firmas de seguros de Colombia",
-      "country": "Chile",
-      "region": "LATAM",
-      "sector": "",
-      "value": null,
-      "summary": "Firma brasileña se queda con la operación de Banmédica en Chile y participaciones en firmas de seguros de Colombia",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPMUY2RWxQVFZILWhiR0VYZmRjUklVaDFlUF81UVU0SnRFaHk3djd5SlpjTU03bGNmdUxBMzJZellIZ21KMjRhN3FCa3dacU9GTmRlejdhYkpPRExEdEpBVGc1bkRmOUhrQ2I0YXNoN3c2Xy1ycUp1NGYwVW1YZmFmR3BUdElsV0FCTENVQkwzQQ?oc=5"
-    },
-    {
       "id": "cl-1j0bd4p",
       "date": "2025-10-17",
       "approxDate": false,
@@ -1348,22 +1364,6 @@
       "summary": "Fusión Anglo-Teck crea nuevo orden en minería del cobre y pone presión a grandes productores",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWFN4cGhyYTdVY19yMFlXWEN5T2JTVXNLSkdsRWtELVJ2Q3BzTlFpel9EdElnNlZ0SUFJeDNZa2Y4QzNlbXgyb0NBcW8zX0NDMVJxZDlmVThqSmV1QjExUDV1azh3dlR1eDJaZUJDdmlhcUNrbnZiZEZteVI0LUpYRFdJNHY3WGhPUVNzYWhOak56eW1VaFhkam1yUm9IbkIw?oc=5"
-    },
-    {
-      "id": "cl-pt7g3w",
-      "date": "2025-09-09",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Anglo acuerda fusión con Teck para crear un gigante minero global del cobre que en Chile combinará Collahuasi y Quebrada Blanca",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "Minería",
-      "value": null,
-      "summary": "Anglo acuerda fusión con Teck para crear un gigante minero global del cobre que en Chile combinará Collahuasi y Quebrada Blanca",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQllYUFBfWmdSN3FNclVyT0RQX3RPRVMwcUJ3MWI1bUI5RVpBN2xIU3dMdGg3aUN0QXFWU3pFbVF5NGlWcGtPU25hSmNsRXRWbXB6UDYzN3ZuZFNGY2Jsb1FTME9OX3laZmc2ZnFuZHJaaWJPVm1Ecy0wTjExWDJxejlGN0RoS2RoYmNSM2RaQlRWLUZ5Z2ExTFd1WmowTEctcmF6UE1iOFBUTFQw?oc=5"
     },
     {
       "id": "cl-1cc6bp8",
@@ -1494,6 +1494,22 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdm1QT0x3ZE1XeWszU2xFTEJ1V0hXclA3eElHdmIyR0xINHJmOEdzQ0l6VXpScFVuQlJveWlxdzl2YVJ5Uk54RDgxNHJId2ZrajhWWTE3Ynlva0x2Y1l3U3hQNUtUdDFHbm1VU3ZUSE1ZSF83VU9Qc0s4bkVKOUFrcEhteEpFTEdiVVNXLUE1YVE3REFmd1QwcWJ4cDJkcFZaNF80?oc=5"
     },
     {
+      "id": "cl-mw9ivp",
+      "date": "2025-07-12",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "La disputa por una mina en quiebra que involucra a empresarios rusos y acusaciones de corrupción contra el liquidador",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "La disputa por una mina en quiebra que involucra a empresarios rusos y acusaciones de corrupción contra el liquidador",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTUxhWjJWUUxYNEp4dWRZeWxyMjEtUVZiN045ZE1PM2RhaE1oajRPT2ctc1BGVm1ITmF6bUtPNHdTalpFX1lsX2RjSVpkS1ZHOHJQZE5HR0pFRGpHRkxsc1RJeVFpcUJtQVo3LWkwWTZ6VHFmTkh2bHhGLTdQR0JBd25JLTkyT1RxcUFjbnEzZVJIX2Z4YUVwMG5aM2NrMm1GeldQRTBQdW5YUQ?oc=5"
+    },
+    {
       "id": "cl-7dniwk",
       "date": "2025-06-17",
       "approxDate": false,
@@ -1572,22 +1588,6 @@
       "summary": "Su quinta compra desde 2020: Colegium adquiere edtech de jardines infantiles",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVWoxX2w5WVJpWkJ1RVdraU9LSlRHclNOTlNDU2ZtNEplQXJuX1A5OGV4RTFPcTYwbG9hVlRNMWtxYjZJS09MVHVaVWtROGtpN25aTXN1S28zRWNrSXNpaVNUZm9RaVZIYkU5M18tdlJ0cGRuQlNhRjFlRGdHSUQzZG1aM1FoNVVYS251bFZjQ3lGUlFQWHNBdHZWSEFsckdUMWFCT19mUC13Zw?oc=5"
-    },
-    {
-      "id": "cl-1eh4ic9",
-      "date": "2025-05-16",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "FNE da luz verde para que familia de Gabriel Ruiz-Tagle compre el 100% de Construmart",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "FNE da luz verde para que familia de Gabriel Ruiz-Tagle compre el 100% de Construmart",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZUdvcGIxa1lqbFRpVVZZN2w3ckNlYWkxZjdMdl9nenh0VXZvb2w0dDFabHEtVEVXcGtKWm5HYkNUejJVQ1JtZmpfQkRpQk1nMEo4UWVCNWk0NVdDd3pEaEJ5M2RucVBPTnB3d3J5Z0dfVkZRYzlDSDFXN19PampmczV2Wng5SWdqZzNGbm9GUjNFWjBXYTY4QXFkcXNHQm14blZnbjFTMmlLZw?oc=5"
     },
     {
       "id": "cl-1szda4n",
@@ -1862,22 +1862,6 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOOUtUbXB3NTRvdWw0Slpoc0ZaZUVOMF9iWDFNUG03MjM2VWVHNU84VW1kT21UdEpSVFJHeWkzakZHZEx0OUE5T1Y3d2FheGFBWV9yUTVrN2dWZk5oZy10Z2NZZmJpZU9Hb005dWdjS1d4WEVyb0VVdUwxZzRSOVR4UWtzaVo4WFVmTDVMbGZ0Zkl6VDBvUDJfc2R4WGlMeFl1Tl92d2lEcw?oc=5"
     },
     {
-      "id": "cl-xe6irj",
-      "date": "2024-12-03",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Directores de Cementos Bío Bío consideran insuficiente nueva oferta de Yura pese a que iguala la propuesta de MLC",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Directores de Cementos Bío Bío consideran insuficiente nueva oferta de Yura pese a que iguala la propuesta de MLC",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUDJZQ1VMMU5oTXZhMkljYlNuSTNUT1JMbU9seFRza0VwNmFEYWZ4Vml2b2xXZFlHSnY0QTBsMVVZb29ncF9renNYN1c1MDNqR2ZCTG9MeVduTEpsRmN4d2VyTXk3Vy1pSE5mSE90TmdQelJtX3dFUkJvYlJ3eTNvNGpjODZvWl94NGNuZ1lYWmlpNmZhZGd0VkF1OHlQQ2xqeS1IbTlhZG1JdFE?oc=5"
-    },
-    {
       "id": "cl-1w54f6b",
       "date": "2024-11-26",
       "approxDate": false,
@@ -1972,22 +1956,6 @@
       "summary": "¿Comprar un departamento nuevo o usado?",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOeklrNWdwVTV4TUFUdUxSVzJhbWI1OUNPRllnMGpqTjBCazhPcjg3UVZFNFZleWpKNjg1cFNBOGl4RDh0Q1g1bDM5WmxOd1EyLTR5V2hvTHl4UjQxQm4zbnNYSmVYeWF3SDRWdFpkMlJZc29mUlpDYVBBT1o2QWFrcUtRNExPNHExSU9N?oc=5"
-    },
-    {
-      "id": "cl-jfhzn7",
-      "date": "2024-09-23",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Fondo Apollo Global Management presenta una multimillonaria oferta para invertir en la tecnológica Intel",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "Fondo Apollo Global Management presenta una multimillonaria oferta para invertir en la tecnológica Intel",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOd1VlRTYzSmNqdFVKQkw0Y2l5ME5IdWJSVzZ0eHRZc3VHYlJrZTBld2Q0YklDYzNMdUZsTlRiR1JXMzlScWFHVGs0SXE5anhQZ3lGTUtBZVVqTmp3VFRjVXJGWEdhT3RYUDE3VWNORTAySFdoY3RSLUszSXBoQmNZbkhWZ3h2aUVubHhELXVwYjlEZm9JajBr?oc=5"
     },
     {
       "id": "cl-1nv6n2l",
@@ -2100,22 +2068,6 @@
       "summary": "Falabella y Mallplaza cierra negocio en Perú",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPTWdKZ0ZrQUtUTnpzdVlsTmFTNlVaaG5NMkF3ZzhPZXFPNDNxeUxmUUtlczFzNFNBNmM2ajJqTFlGSWNwWENQdFgwWm5LWExFczVCUmlWMC1KTW5tSTlrVjlmYlBSUDNXdTZTQmdxSzZQMm0ybElVRkJmbUI5S1lNejFnaXNpQzJ2bjl2X0JEaEgwTUNQSkxBTnZEUjZzNEE?oc=5"
-    },
-    {
-      "id": "cl-y4kuwz",
-      "date": "2024-03-27",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "2024: ¿El año definitivo para comprar una propiedad?",
-      "country": "Chile",
-      "region": "CL",
-      "sector": "",
-      "value": null,
-      "summary": "2024: ¿El año definitivo para comprar una propiedad?",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOWZCM3Mxc3BXYzdvLVV3eTFpNjdJRU05ZE9LeU1pNzhWSDNwdldpbFRQYnhuVzJWUWJSOURXR2xWN3ptLWwyYmY1UlFfQVlZc1Y2NHYyLXJ6MnZzMXg0X296UlpXTWptNXh5UFh0VmlWU1VNWC1qcGduX3djVFlrWENFaExZVVZuQVFkaGVJa3VWRnNjUEZRczdYTQ?oc=5"
     },
     {
       "id": "cl-15faxhm",
@@ -2662,6 +2614,38 @@
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNczNkUGtmRV9mdzZzaHg0cGZiTTJHRUp1bVFDY2lmX1V0bW9sX2dNeHdxZ1RzN00xa1B2TUNyX0dFMzJVaTlkTHBoYTk3NkVIUWY4emYwZmo3ZE94cVQyVTVUMW03cWs0SHJvck5WMmluNTFxNUptNm9ZM3ZTTGo1Wks0U0t5aGEtMk43N01wS2lNMHNMSzlvc0JQQXJtd3ZMV3FRdl9ORQ?oc=5"
     },
     {
+      "id": "cl-1amt3fz",
+      "date": "2021-10-15",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Registro Civil adjudica licitación de pasaportes y cédulas a consorcio liderado por firma china",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": null,
+      "summary": "Registro Civil adjudica licitación de pasaportes y cédulas a consorcio liderado por firma china",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSGxsUi15SkVEckV0SURZSE56Y1NNVEg0dXl2bG1aODZCaVg2enIzQ3JqZHVhZm5NX0hwTFYwbmJUSUhMMVQzVXZqbFVZT2pnQXZPQmVsMXpORk5sWkZtNmNqZXkzNmxHSE9DZEFqQzdOaWgxR3JQaEtQM25xVVlUTGdHXzhLM2NYY0FMWVpZMm1JcXJCV2c1NXlnOFFmdw?oc=5"
+    },
+    {
+      "id": "cl-1qixjo1",
+      "date": "2021-08-12",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "Grupo Contempora entra al mercado del retail",
+      "target": "20% de representante de GAP y The North Face",
+      "headline": "",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "Consumo / Retail",
+      "value": null,
+      "summary": "Grupo Contempora entra al mercado del retail: adquiere 20% de representante de GAP y The North Face",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQaG5IVG5xQ2t6dmowOUVRZU12NW1oRmhxYV9KREU3N2VER3YxVzg1OXVLSmtUUmxyX292YnRmWkt1R0JuLVhuWWs2c05qTmdGVW5UdUVjZlE4cU5xRVB3T0p1ZGJsRTJNWE0tai1Sc2V0cVIycE5CSTgxXzFNSzdpc2wtT1JEQnM4ZGJKZDhyZkJXcGprZG5UcVJyTGxpQjBSQ0VvVzA2WQ?oc=5"
+    },
+    {
       "id": "cl-q3zc30",
       "date": "2021-07-21",
       "approxDate": false,
@@ -2838,22 +2822,6 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWDhFdFJyZHhRcW5nVGkzVjRjZTU5eUYyb1ducHpyc29acE0xMjNPRFJMU1hvUEhIdV8tbGZaSEo3ZkQxSnpqTVR0QzNVaFFLUFNkYUxkdTFuS3prem55MEhRQXdHMDlaZTR1STlqM21UNW41YXBGTWRSRE1fMnV5MTJaYWxleXY3cmI0eDJjeFBwWFIyQUtfLUJlOGNSVkR5OEF4RmZNSnkwcGNPcHdKMw?oc=5"
     },
     {
-      "id": "latam-pbegd8",
-      "date": "2020-08-28",
-      "approxDate": false,
-      "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Fondo brasileño lanzará OPA por Graña y Montero, que tiene a los Solari entre sus accionistas",
-      "country": "Chile",
-      "region": "LATAM",
-      "sector": "",
-      "value": null,
-      "summary": "Fondo brasileño lanzará OPA por Graña y Montero, que tiene a los Solari entre sus accionistas",
-      "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNLVdicGlVRnJOTGVRRmtldmJ2ZVdzQWswcDJrTEppN2tJTXVYbzBSSzdlQjJYNlJjOU13RWVkdUx2ek04czIwWTFaNUgtcUpwemNheWFqVXgzbWFXWUJiVEtnWVBXYl9tbW9LRHMzMjZMd1VFdjJud0cwVDNOclRkNnZxYlVTUEpTNjNQUXlmR2lXMDdrMjVLMjRFd0pkX1plcXNGU0dGck5fcHpIZW9N?oc=5"
-    },
-    {
       "id": "cl-b06t51",
       "date": "2020-07-31",
       "approxDate": false,
@@ -2982,20 +2950,20 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdnVybVBFNlVBY1FtVVZ5enV2Ml9FNEFlaGEwOU1qM1VuOXU4Smdkbk1tZE1QdDhJVFJINEZaN0IwUENfdXdvVUlhNUEwMDl1b3NDWkx3bVBuUWVHRExQdndWUHpYR1VsSHVVVXJxbGo5MURoc1dBeUsyREhQX2xLU1ZtSXluZXZPcEFtRFptNUlTNm1MOEFpeXJkcHB0bFVKVF96a2Q2ZGczQVR3aXc?oc=5"
     },
     {
-      "id": "us-1oh8krt",
-      "date": "2019-08-28",
+      "id": "cl-8wktd3",
+      "date": "2019-01-30",
       "approxDate": false,
       "auto": true,
-      "acquirer": "",
-      "target": "",
-      "headline": "Gigante de EEUU toma control de matriz de Isofrut",
+      "acquirer": "Forus abre la billetera y",
+      "target": "marca de zapatos Aldo",
+      "headline": "",
       "country": "Chile",
-      "region": "US",
+      "region": "CL",
       "sector": "",
       "value": null,
-      "summary": "Gigante de EEUU toma control de matriz de Isofrut",
+      "summary": "Forus abre la billetera y adquiere marca de zapatos Aldo en Uruguay",
       "source": "Diario Financiero",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQX0l3UVQxQ3kyMTJlMEp2LVR3bGZLVmNKY0llcjg4THBxZlBBX3Z2ODNVcFpseWxnUVQwa1dFT0VMS1d2UVY5V2NjWmc0N3hscFpzaklNY2dzRnFMSGpRRkRBY0Y3UkYwOG5Ka1VaclVLeXpqRnBUbGJPaUdmQU0tMFM4c1JqOHdFWVlV?oc=5"
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZnBlb0hxcE5uZ0p6WFJfaTJOa0ZuLUlMQXZYalRBYnYtUmRrODd5dnBWRFV5MGpWZzNWOFFKTERkcF9Pa0tKdFZhSmcwdHN4bi00RE1JTUd6YVlGUDFkQmJJdGVJaXRibGVLTTlRaDVZVWRHVUt6MmFjbXBMRnpYTXZ6MXp5TVdvcjNUNEVNMXJsZ2M3YnVPbnhKWUhlell5LW5md3k3aHY?oc=5"
     },
     {
       "id": "cl-hsjvuy",
@@ -3028,6 +2996,22 @@
       "summary": "Gigante eléctrica china concreta ingreso a Chile con compra de central hidro en el Biobío",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZy1kQWEtS1RfWUdxeHpqMFZJNnBXTHNSblBzd3pZRjRIcW1XWENqcGhGWTVsdVBpeDdLNWFvR24zQ2djcHRRS1RxQk5nR2cyMElqcjU1bUl1azhhb1lZM3pvTExDY2lVRklIeWZSd28wRHRtNjRpT3JBaDJHV2tlWnN1SzdfQ2lSTG1kZUhfYm5XUWU1SEsySGpPQTFrcERoZGI4d2c5NjM?oc=5"
+    },
+    {
+      "id": "cl-3oiah5",
+      "date": "2018-06-01",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "AquaChile",
+      "target": "la totalidad de Salmones Magallanes",
+      "headline": "",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": "US$ 255 millones",
+      "summary": "AquaChile adquiere la totalidad de Salmones Magallanes por US$ 255 millones",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNY1FHR3ZzZFJET2tLMGhCcVk2c2o3NWV2bF9uUVljd1gwT2Zta1VPZDZtcV9ZQTZYUFhKcldUWE4xaTNFU3FGSHNIejJEdDR1cmd4dEc4T2xTMFRIc0RaMFQxY3lpVEswVGRsZkRHN2Y0SUJnbFl4RUtseDRqY0w4eW5KUXdZWkJHR3pNcktjTFJKQXBRbWduRUxlV2xZOXFQWGthLXdCSWhVM1NfNldJMQ?oc=5"
     },
     {
       "id": "cl-1rguam1",
@@ -3172,6 +3156,22 @@
       "summary": "IFC finalmente concreta la adquisición del 18% de Copeval",
       "source": "Diario Financiero",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYnFqUWprUXE3bWxKbFpCaUp2amtMOXl5TUltTWNkMDBmUEc0VXRqOXlMLV84bzJIMHktMG1xdUplV09ERFdNNXJzMFZoZnh5MURxamxCRlJvWmpTUzA4Yk0wNkVZRmtzaWIzMk90dUNjZXZRdHIxX0JCQVBkSnFIOEpvN0NDRlEzNHNXT3YzSTVzeE1OTDI3OTdB?oc=5"
+    },
+    {
+      "id": "cl-1eclv6h",
+      "date": "2016-06-02",
+      "approxDate": false,
+      "auto": true,
+      "acquirer": "",
+      "target": "",
+      "headline": "Coca-Cola comprará a Unilever su negocio de bebidas AdeS por US$ 575 millones",
+      "country": "Chile",
+      "region": "CL",
+      "sector": "",
+      "value": "US$ 575 millones",
+      "summary": "Coca-Cola comprará a Unilever su negocio de bebidas AdeS por US$ 575 millones",
+      "source": "Diario Financiero",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPWkxJaG1zZVdGaDFYbjJWS1pWNkdNY005QlZxN0hzaU9FdzNjMTNBYW9BRzV5d3ZnVzJPaTFIcm9IZzlyQlZWQ2JIUWdKNi1JVWFNVThNRVQ5V0JKOXlGZlpBalRlM2Rkb2MtSXY2QVNCWkhCczVoa3NzZHZ1OEQ3T2pKckFoYXRsdG9rc0JGOF8xUGlEdzBlMC1Da0tnUmtkWmdFTHpqamVIcmFkcnlr?oc=5"
     }
   ]
 }
