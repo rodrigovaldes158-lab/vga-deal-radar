@@ -1,7 +1,7 @@
 /* VGA — Deal Radar · service worker
    App-shell caching so the app opens offline. Deal data is fetched
    network-first so the list stays fresh when online. */
-var CACHE = "vga-deal-radar-v3";
+var CACHE = "vga-deal-radar-v4";
 var SHELL = [
   "./",
   "./index.html",
@@ -29,7 +29,7 @@ self.addEventListener("activate", function (e) {
 self.addEventListener("fetch", function (e) {
   var url = e.request.url;
   // Deal data: network-first (fresh when online, cached fallback offline).
-  if (url.indexOf("deals.json") !== -1) {
+  if (url.indexOf("deals.json") !== -1 || url.indexOf("ibr.json") !== -1) {
     e.respondWith(
       fetch(e.request).then(function (res) {
         var copy = res.clone();

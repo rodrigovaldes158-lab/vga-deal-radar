@@ -8,12 +8,13 @@
   var REGION_LABEL = { CL: "Chile", LATAM: "Latinoamérica", US: "EE.UU.", GLOBAL: "Global" };
   var MONTHS = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
 
-  var state = { deals: [], period: 1, region: "ALL", service: null, screen: "services", generatedAt: "" };
+  var state = { deals: [], period: 1, region: "ALL", service: null, screen: "services", generatedAt: "", ibr: null };
 
   // ---- DOM refs ----
   var screens = {
     services: document.getElementById("screen-services"),
-    deals: document.getElementById("screen-deals")
+    deals: document.getElementById("screen-deals"),
+    ibr: document.getElementById("screen-ibr")
   };
   var backBtn = document.getElementById("backBtn");
   var dealList = document.getElementById("dealList");
@@ -23,6 +24,10 @@
   var periodFilter = document.getElementById("periodFilter");
   var sheetBackdrop = document.getElementById("sheetBackdrop");
   var sheetBody = document.getElementById("sheetBody");
+  var ibrGroups = document.getElementById("ibrGroups");
+  var ibrSub = document.getElementById("ibrSub");
+  var ibrReportLink = document.getElementById("ibrReportLink");
+  var ibrEmpty = document.getElementById("ibrEmpty");
 
   // ---- Helpers ----
   function fmtDate(iso) {
@@ -139,7 +144,74 @@
     });
   });
 
-  backBtn.addEventListener("click", function () { show("services"); });
+  var PARENT = { deals: "services", ibr: "deals" };
+  backBtn.addEventListener("click", function () { show(PARENT[state.screen] || "services"); });
+
+  // ---- Informe IB ----
+  document.getElementById("ibrBtn").addEventListener("click", function () {
+    show("ibr");
+    renderIBR();
+  });
+
+  function renderIBR() {
+    var data = state.ibr;
+    ibrGroups.innerHTML = "";
+    if (!data || !data.transactions || !data.transactions.length) {
+      ibrEmpty.hidden = false;
+      ibrSub.textContent = "Transacciones del Investment Banking Report (Landmark + DF).";
+      return;
+    }
+    ibrEmpty.hidden = true;
+    ibrSub.textContent = (data.month || "") + " · " + data.transactions.length + " transacciones · Landmark + DF";
+    ibrReportLink.href = safeUrl(data.reportUrl);
+
+    var groups = [
+      { label: "Anunciadas", rows: data.transactions.filter(function (t) { return t.status === "Anunciada"; }) },
+      { label: "Completadas", rows: data.transactions.filter(function (t) { return t.status !== "Anunciada"; }) }
+    ];
+    groups.forEach(function (g) {
+      if (!g.rows.length) return;
+      var h = document.createElement("div");
+      h.className = "ibr-group-head";
+      h.textContent = g.label + " (" + g.rows.length + ")";
+      ibrGroups.appendChild(h);
+      var list = document.createElement("div");
+      list.className = "deal-list";
+      g.rows.forEach(function (t) {
+        var card = document.createElement("button");
+        card.className = "deal-card";
+        var pill = function (txt, cls) { return txt ? '<span class="deal-pill' + (cls ? " " + cls : "") + '">' + esc(txt) + "</span>" : ""; };
+        var when = t.date ? fmtDate(t.date) : "Anunciada";
+        card.innerHTML =
+          '<div class="deal-top">' +
+            '<span class="deal-date">' + esc(when) + "</span>" +
+            '<span class="deal-region ' + (t.status === "Anunciada" ? "is-announced" : "is-done") + '">' + esc(t.status) + "</span>" +
+          "</div>" +
+          '<div class="deal-title">' + esc(t.acquirer) + ' <span class="arrow">→</span> ' + esc(t.target) + "</div>" +
+          '<div class="deal-sub">' + pill(t.sector) + pill(t.value, "deal-value") + "</div>";
+        card.addEventListener("click", function () { openIbrSheet(t, data); });
+        list.appendChild(card);
+      });
+      ibrGroups.appendChild(list);
+    });
+  }
+
+  function openIbrSheet(t, data) {
+    sheetBody.innerHTML =
+      "<h2>" + esc(t.acquirer) + ' <span class="arrow">→</span> ' + esc(t.target) + "</h2>" +
+      '<div class="sheet-meta">Informe IB · ' + esc(data.month || "") + " · " + esc(t.status) + "</div>" +
+      '<p class="sheet-summary">' + esc(t.summary) + "</p>" +
+      (t.date ? row("Fecha", fmtDate(t.date)) : row("Estado", "Anunciada (aún no cerrada)")) +
+      row("Comprador", esc(t.acquirer)) +
+      row("Activo adquirido", esc(t.target)) +
+      row("Vendedor", esc(t.seller) || "—") +
+      row("Monto", esc(t.value) || "No divulgado") +
+      row("Sector", esc(t.sector) || "—") +
+      '<a class="sheet-cta" href="' + esc(safeUrl(data.reportUrl)) + '" target="_blank" rel="noopener">Ver reporte oficial ↗</a>' +
+      '<p class="sheet-note">Fuente: Investment Banking Report (Landmark + Diario Financiero). Oportunidad potencial de PPA.</p>';
+    sheetBackdrop.hidden = false;
+    document.body.style.overflow = "hidden";
+  }
 
   periodFilter.addEventListener("click", function (e) {
     var b = e.target.closest(".chip");
@@ -169,6 +241,20 @@
       if (state.screen === "deals") renderDeals();   // refresh if data arrived after navigating
     })
     .catch(function () { state.deals = []; });
+
+  fetch("ibr.json", { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      state.ibr = data;
+      if (state.screen === "ibr") renderIBR();
+    })
+    .catch(function () { state.ibr = null; });
+
+  // Optional deep-link: #ibr opens the Informe IB screen directly.
+  if (location.hash === "#ibr") {
+    show("ibr");
+    renderIBR();
+  }
 
   // Optional deep-link: #ppa opens the PPA list. #ppa-3 / #ppa-7 also preset the period.
   if (location.hash.indexOf("#ppa") === 0) {

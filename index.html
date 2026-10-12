@@ -62,15 +62,15 @@
         <p class="screen-sub">Fusiones y adquisiciones detectadas desde fuentes públicas.</p>
       </div>
 
-      <!-- Fuente destacada: Investment Banking Report (Landmark + Diario Financiero) -->
-      <a class="source-banner" href="https://landmark-cap.com/en/ibr-df" target="_blank" rel="noopener">
+      <!-- Entrada a la sección "Informe IB" (transacciones del IBR de Landmark + DF) -->
+      <button class="source-banner" id="ibrBtn" type="button">
         <span class="sb-doc">IBR</span>
         <span class="sb-main">
-          <strong>Investment Banking Report</strong>
-          <small>Landmark + Diario Financiero · M&amp;A en Chile · mensual</small>
+          <strong>Informe IB</strong>
+          <small>Transacciones del Investment Banking Report (Landmark + DF)</small>
         </span>
-        <span class="sb-go">↗</span>
-      </a>
+        <span class="sb-go">›</span>
+      </button>
 
       <div class="filters">
         <div class="filter-group" id="periodFilter" role="group" aria-label="Período">
@@ -94,6 +94,19 @@
       <div class="result-meta" id="resultMeta"></div>
       <div class="deal-list" id="dealList"></div>
       <p class="empty" id="emptyState" hidden>No se detectaron operaciones para este período y región.</p>
+    </section>
+
+    <!-- ===================== SCREEN 3 · INFORME IB ===================== -->
+    <section class="screen" id="screen-ibr">
+      <div class="screen-head">
+        <h1>Informe IB</h1>
+        <p class="screen-sub" id="ibrSub">Transacciones del Investment Banking Report (Landmark + DF).</p>
+      </div>
+
+      <a class="ibr-report-link" id="ibrReportLink" href="#" target="_blank" rel="noopener">Ver reporte oficial ↗</a>
+
+      <div id="ibrGroups"></div>
+      <p class="empty" id="ibrEmpty" hidden>No se pudieron cargar las transacciones del informe.</p>
     </section>
 
   </main>

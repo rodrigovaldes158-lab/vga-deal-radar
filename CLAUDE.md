@@ -17,7 +17,23 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
   Flujo: pantalla de servicios → **PPA** → lista de M&A con filtros de **período**
   (1/3/7 meses) y **región** (single-select). Detalle por operación con enlace a la fuente.
   `deals.json` sembrado a mano con ~16 operaciones reales (de noticias/filings).
-- **Etapa 2a (datos automáticos): IMPLEMENTADA (sin probar en la nube todavía).**
+- **Etapa 2a (datos automáticos): COMPLETA Y EN PRODUCCIÓN (2026-06-14).**
+  Repo `github.com/rodrigovaldes158-lab/vga-deal-radar`; workflow corre verde a diario y publica
+  `deals.json` con las M&A del DF. **GitHub Pages activo** (deploy from branch main /root) y la
+  app **instalada en el Android del usuario**. URL live:
+  `https://rodrigovaldes158-lab.github.io/vga-deal-radar/`
+- **Sección "Informe IB" — Fase 1 DESPLEGADA (2026-10-12):** pantalla `#screen-ibr`
+  con las transacciones M&A del Investment Banking Report (Landmark + DF). `ibr.json` sembrado
+  con 19 transacciones reales de Abril 2026 (extraídas del PDF del Escritorio). El banner de la
+  pantalla PPA ahora dice "Informe IB" y abre la sección (deep-link `#ibr`).
+  **Los datos son de Abril 2026 — Landmark ya publicó hasta Agosto 2026 (`articulo-2520`): actualizar `ibr.json`.**
+- **Fase 2 IBR (a decidir):** automatizar descarga+lectura del PDF mensual (frágil, requiere
+  librería PDF en Actions, no testeable local) vs. actualización mensual asistida (leer el PDF
+  nuevo y actualizar `ibr.json` a mano). Después sigue la **Etapa 2b (notificaciones push)**.
+- Leer PDF sin poppler/Node/Python: **Word COM** + registro `DisableConvertPdfWarning=1`
+  (ver memoria `vga-deal-radar-app` para el detalle). El reporte del IBR trae tabla
+  Fecha/Activo/Vendedor/Comprador/Monto/Comentarios en secciones Completadas y Anunciadas.
+  Listado Landmark: `landmark-cap.com/diario-financiero`; último mes = `articulo-NNNN` (nº más alto).
   `tools/fetch-deals.mjs` reescrito: consulta GDELT por región, **extrae**
   adquirente/objetivo/monto/sector del titular, y **fusiona** conservando las curadas
   (las que no tienen `auto:true`). Workflow `.github/workflows/update-deals.yml` lo corre
@@ -138,3 +154,25 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
   renderizar a `%TEMP%` y luego copiar.
 - **Detener `serve.ps1`**: el puerto 8000 aparece como dueño "System/PID 4" (http.sys);
   hay que matar el proceso `powershell.exe` cuya CommandLine contiene `serve.ps1`.
+- **Workflow self-commit (non-fast-forward)**: si la corrida manual y la del cron se cruzan,
+  el `git push` se rechaza ("fetch first"). Solución ya aplicada en `update-deals.yml`:
+  `concurrency: { group, cancel-in-progress: true }` + `git pull --rebase --autostash origin main`
+  antes del push + `fetch-depth: 0` en checkout.
+- **GitHub web**: arrastrar carpetas que empiezan con `.` (ej. `.github`) suele NO subirlas;
+  crear/actualizar esos archivos con "Create new file" o "Upload files" DENTRO de la carpeta.
+  El botón "Run workflow" solo aparece al seleccionar el workflow en la barra lateral izquierda.
+- **La carpeta local YA ES el repo git (2026-10-12).** Se dejó de subir archivos a mano por la web
+  de GitHub: `C:\Users\rodri\OneDrive\Escritorio\VGA App` es un clon de
+  `github.com/rodrigovaldes158-lab/vga-deal-radar`. Ahora los cambios se publican con
+  `git add … && git commit && git push` (GitHub Pages redespliega solo).
+  - **NUNCA commitear `deals.json` desde local.** Lo reescribe el robot en la nube todos los días;
+    la copia local se queda atrás. Antes de trabajar: `git pull` para traer la del robot.
+  - **Finales de línea:** el repo está en LF y el clon de Git for Windows checkoutea CRLF
+    (`core.autocrlf=true` a nivel sistema). En este repo se fijó `core.autocrlf=false`; si algún
+    día *todos* los archivos aparecen modificados, es eso: normalizar con `sed -i 's/\r$//'`.
+- **Medir responsividad de verdad:** servir con `serve.ps1` y cargar la app dentro de un
+  `<iframe width=390>` en una página `_probe.html` del mismo origen; leer `scrollWidth` desde el
+  padre. Las capturas directas de Edge headless con `--window-size=390` se ven cortadas aunque
+  no haya overflow real (scrollWidth=375=clientWidth → correcto). Borrar `_probe.html` al terminar.
+- **`.source-banner` es un `<button>`, no un `<a>`:** necesita `width:100%;border:0;text-align:left`
+  explícitos, porque los botones no heredan ancho ni alineación (se corrigió el 2026-10-12).
