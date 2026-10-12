@@ -70,6 +70,16 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
 - Filtro período: **1 / 3 / 7 meses**.
 - Filtro región: **single-select** con opción "Todas" → Chile / Latinoamérica / EE.UU. / Global.
 - Datos = **fuentes públicas gratuitas** (en Etapa 1 se sembraron a mano; Etapa 2 automatiza).
+- **LinkedIn: descartado (2026-10-12).** El usuario pidió enlazar su cuenta para captar el IBR
+  que Landmark publica allí antes que en su web. **No existe API de LinkedIn que lea el feed ni
+  los posts de una página que no administras** (la Community Management API solo cubre páginas
+  propias), y automatizar su sesión es scraping: lo prohíbe el acuerdo de usuario y arriesga su
+  cuenta profesional. Se reemplazó por `tools/check-ibr.mjs` (ver abajo). No reproponerlo.
+- **Capital IQ: en pausa (2026-10-12).** La API existe pero es un entitlement empresarial aparte
+  del asiento normal, y —más importante— los términos de S- Datos = **fuentes públicas gratuitas** (en Etapa 1 se sembraron a mano; Etapa 2 automatiza).P prohíben redistribuir los datos:
+  publicarlos en este sitio, que es **público**, sería incumplimiento. Requisito previo para
+  cualquier integración: que la app deje de ser pública. Pendiente de que el usuario consulte
+  con su representante de S- Datos = **fuentes públicas gratuitas** (en Etapa 1 se sembraron a mano; Etapa 2 automatiza).P.
 
 ## Cómo correr / previsualizar
 
@@ -98,6 +108,11 @@ serve.ps1               Servidor local de pruebas (HttpListener, :8000)
 icons/                  icon.svg (fuente) + icon-180/192/512.png
 assets/                 vga_mark.svg (navy+teal) y vga_mark_reverse.svg (blanco+teal)
 tools/fetch-deals.mjs   Robot de actualización (Etapa 2, requiere Node 18+)
+tools/check-ibr.mjs     Vigía: detecta si Landmark publicó un IBR nuevo
+tools/pdf-table.ps1     Extrae texto con coordenadas de los PDF del IBR
+ibr.json                Transacciones del Informe IB (ver "Informe IB")
+ibr-watch.json          Estado del vigía del IBR (lo escribe check-ibr.mjs)
+assets/sectores/        12 fotos de portada por sector + CREDITS.md
 ```
 
 ### Esquema de `deals.json`
@@ -227,3 +242,39 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
   quedan en 27–78 KB. Sirve también para armar un mosaico de contactos y revisarlas todas de una.
 - **`serve.ps1` solo conoce los MIME que tiene en su tabla**: se le agregó `.jpg/.jpeg/.webp`
   (antes servía los JPEG como `application/octet-stream`). GitHub Pages sí los sirve bien.
+
+## Vigía del Investment Banking Report (`tools/check-ibr.mjs`)
+
+Corre a diario dentro del mismo workflow que el robot de `deals.json`, con
+`continue-on-error: true` para que una caída de Landmark no tumbe la actualización
+de operaciones. Escribe `ibr-watch.json`; la app lo lee y, si hay `found`, muestra
+un aviso (`.ibr-alert`) arriba de la portada.
+
+**Por qué existe:** el usuario quería enterarse del informe apenas sale, porque
+Landmark lo publica en LinkedIn antes que en su web. **Conectar LinkedIn se
+descartó** (ver "Decisiones cerradas"). El reemplazo aprovecha que el sitio corre
+sobre HubSpot y el PDF vive en una ruta predecible, independiente de la página que
+lo enlaza: es habitual que el archivo se suba antes de publicar la página.
+
+Dos sondas, lo que aparezca primero gana:
+
+1. **El PDF en el CDN** — `/hubfs/Articulos%20diario%20financiero/IBR%20<Mes>%20<año>.pdf`,
+   probando dos meses hacia adelante. **Landmark alterna mayúsculas en el mes**
+   ("IBR agosto 2026.pdf" pero "IBR Julio 2026.pdf"), así que se prueban ambas variantes.
+2. **El artículo correlativo** — ene=2513 … ago=2520, probando 3 números hacia adelante.
+   Se verifica que la página mencione "Investment Banking"/"IBR", porque la serie
+   `diario-financiero` incluye otros artículos.
+
+**Al incorporar un informe nuevo a `ibr.json`:** actualizar `latestKnown` (mes y número
+de artículo) y volver a dejar `found` en `null`, o el aviso queda pegado en la portada.
+
+**No se pudo probar con un informe real todavía:** el de agosto salió el 28-09-2026, así
+que el siguiente vence a fines de octubre. Al 12-10-2026 las sondas devuelven 404, que es
+lo correcto. La primera prueba de verdad será la corrida de fines de octubre.
+
+**Sin Node local, así se validó `check-ibr.mjs`:** se sirve con `serve.ps1` y desde una
+página se hace `fetch` del archivo, se sustituye el `import` de `node:fs/promises` y
+`import.meta.url` por stubs, y se pasa el resto a `new Function()` — si hay error de
+sintaxis, salta ahí. Además se devuelven las funciones puras (`parseMonth`, `addMonths`,
+`pdfCandidates`) para ejercitarlas. Cargarlo con `import()` NO sirve: el fallo al resolver
+`node:fs` se confunde con un error de sintaxis.

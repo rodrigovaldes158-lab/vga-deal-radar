@@ -1,0 +1,10 @@
+{
+  "checkedAt": null,
+  "latestKnown": {
+    "month": "Agosto 2026",
+    "article": 2520,
+    "url": "https://landmark-cap.com/diario-financiero/articulo-2520?hsLang=es"
+  },
+  "found": null,
+  "note": "Lo escribe tools/check-ibr.mjs a diario. 'found' es un informe de Landmark más nuevo que 'latestKnown', aún no incorporado a ibr.json. Al incorporarlo, actualizar latestKnown y dejar found en null."
+}

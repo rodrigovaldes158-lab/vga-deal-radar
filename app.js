@@ -415,6 +415,20 @@
     })
     .catch(function () { state.ibr = null; homeEmpty.hidden = false; });
 
+  // Vigía del IBR: avisa si Landmark ya publicó un informe que todavía no
+  // está incorporado a ibr.json. Lo escribe tools/check-ibr.mjs a diario.
+  fetch("ibr-watch.json", { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (w) {
+      if (!w || !w.found || !w.found.month) return;
+      var alert = document.getElementById("ibrAlert");
+      alert.href = safeUrl(w.found.url);
+      document.getElementById("ibrAlertSub").textContent =
+        "Landmark publicó el informe de " + w.found.month + " · todavía no está en la app";
+      alert.hidden = false;
+    })
+    .catch(function () {});
+
   // Optional deep-link: #ibr opens the Informe IB screen directly.
   if (location.hash === "#ibr") {
     show("ibr");
