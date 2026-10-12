@@ -1,7 +1,7 @@
 /* VGA — Deal Radar · service worker
    App-shell caching so the app opens offline. Deal data is fetched
    network-first so the list stays fresh when online. */
-var CACHE = "vga-deal-radar-v4";
+var CACHE = "vga-deal-radar-v5";
 var SHELL = [
   "./",
   "./index.html",

@@ -14,7 +14,7 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
 ## Estado actual (2026-06-14)
 
 - **Etapa 1 (MVP): COMPLETA y con diseño aprobado por el usuario.**
-  Flujo: pantalla de servicios → **PPA** → lista de M&A con filtros de **período**
+  Flujo original: pantalla de servicios → **PPA** → lista de M&A con filtros de **período**
   (1/3/7 meses) y **región** (single-select). Detalle por operación con enlace a la fuente.
   `deals.json` sembrado a mano con ~16 operaciones reales (de noticias/filings).
 - **Etapa 2a (datos automáticos): COMPLETA Y EN PRODUCCIÓN (2026-06-14).**
@@ -43,12 +43,24 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
   (las que no tienen `auto:true`). Workflow `.github/workflows/update-deals.yml` lo corre
   a diario. La app muestra "actualizado <fecha>" y escapa el texto externo (anti-XSS).
   **Falta que el usuario lo active en GitHub** (ver README → "Cómo activarlo").
+- **Portada `#screen-home` — NUEVA (2026-10-12).** Se eliminó la pantalla de selección de
+  servicios; la app abre en una portada con jerarquía visual: hero (eyebrow mono + título 31px +
+  bajada), franja de 3 estadísticas, **operación destacada** (la de mayor monto, con portada
+  gráfica), **principales transacciones** (las 5 siguientes por monto, con miniatura) y dos
+  tarjetas de navegación al detalle (Informe IB y Radar de noticias). Los listados de detalle
+  quedaron exactamente como estaban.
+  **Las "imágenes" son SVG generados en `app.js`** (`coverSvg`/`glyph`/`THEMES`): un degradado
+  por familia de sector + una figura abstracta. Se hizo así a propósito — nada externo, así la
+  PWA sigue funcionando offline y el service worker no tiene que cachear binarios nuevos.
+  Para agregar un sector nuevo basta tocar `themeFor()`.
 - **Etapa 2b (notificaciones push): PRÓXIMA TAREA.** Ver "Etapa 2b" abajo.
 
 ## Decisiones cerradas (no cambiar sin pedir al usuario)
 
 - Plataforma = **PWA** (no app nativa por ahora).
-- Un solo servicio: **Purchased Price Allocation (PPA)**. Validar antes de agregar más.
+- **No hay selector de servicios** (se quitó el 2026-10-12 a pedido del usuario). La app abre
+  directamente en la **portada** (`#screen-home`). El PPA sigue siendo el servicio de fondo,
+  pero ya no se elige en pantalla: se menciona en el subtítulo de la portada.
 - Filtro período: **1 / 3 / 7 meses**.
 - Filtro región: **single-select** con opción "Todas" → Chile / Latinoamérica / EE.UU. / Global.
 - Datos = **fuentes públicas gratuitas** (en Etapa 1 se sembraron a mano; Etapa 2 automatiza).
@@ -64,12 +76,13 @@ powershell -ExecutionPolicy Bypass -File serve.ps1   # http://localhost:8000
 Abrir `index.html` con doble clic NO sirve (el navegador bloquea `fetch('deals.json')`
 vía `file://`). Hay que servirlo por HTTP.
 
-Deep-links útiles: `#ppa`, `#ppa-3`, `#ppa-7` (abren PPA con ese período).
+Deep-links útiles: `#ibr` (Informe IB) y `#ppa`, `#ppa-3`, `#ppa-7` (radar de noticias con
+ese período). Sin hash, la app abre en la portada.
 
 ## Estructura
 
 ```
-index.html              Pantallas (servicios, lista, detalle como bottom-sheet)
+index.html              Pantallas (portada, radar, informe IB, detalle como bottom-sheet)
 styles.css              Estilos. Tokens de marca VGA al inicio (:root)
 app.js                  Lógica (IIFE vanilla): carga deals.json, filtros, detalle, SW
 deals.json              Datos M&A (ver esquema abajo)
@@ -141,7 +154,7 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
 ## Reglas
 
 1. No introducir build step ni framework.
-2. No agregar más servicios además de PPA hasta que el usuario lo pida.
+2. No reintroducir la pantalla de selección de servicios sin pedírselo al usuario.
 3. No romper la responsividad (probado a 390px).
 4. La fuente de datos debe ser pública/gratuita salvo que el usuario decida lo contrario.
 
@@ -178,8 +191,9 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
   `<iframe width=390>` en una página `_probe.html` del mismo origen; leer `scrollWidth` desde el
   padre. Las capturas directas de Edge headless con `--window-size=390` se ven cortadas aunque
   no haya overflow real (scrollWidth=375=clientWidth → correcto). Borrar `_probe.html` al terminar.
-- **`.source-banner` es un `<button>`, no un `<a>`:** necesita `width:100%;border:0;text-align:left`
-  explícitos, porque los botones no heredan ancho ni alineación (se corrigió el 2026-10-12).
+- **Los botones que parecen tarjetas (`.nav-card`, `.feature-card`, `.hl-card`) necesitan**
+  `width:100%;border:0;text-align:left` **explícitos**, porque los `<button>` no heredan ancho ni
+  alineación. Se descubrió con el banner `.source-banner` (ya eliminado) el 2026-10-12.
 - **Leer los PDF del IBR: usar `tools/pdf-table.ps1`, NO Word COM.** El método viejo (Word COM)
   se colgó: 200s de CPU sin producir nada, incluso con `DisableConvertPdfWarning=1`. El script
   nuevo extrae el texto con posiciones usando solo .NET (sin Node, Python ni poppler):
