@@ -26,7 +26,11 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
   con las transacciones M&A del Investment Banking Report (Landmark + DF). `ibr.json` sembrado
   con 19 transacciones reales de Abril 2026 (extraídas del PDF del Escritorio). El banner de la
   pantalla PPA ahora dice "Informe IB" y abre la sección (deep-link `#ibr`).
-  **Los datos son de Abril 2026 — Landmark ya publicó hasta Agosto 2026 (`articulo-2520`): actualizar `ibr.json`.**
+  **Datos actualizados a Agosto 2026 (2026-10-12):** `ibr.json` consolida los informes de
+  Abril a Agosto 2026 = **56 operaciones** (38 completadas + 18 anunciadas). Las que aparecen en
+  varios informes se unificaron; las anunciadas que después cerraron quedaron como completadas
+  (ej. GSI Capital / Rentas y Desarrollo Baker: anunciada en abril por US$290M, cerrada el
+  10-06-26 por US$168M). `month` pasó a ser un rango ("Abril – Agosto 2026").
 - **Fase 2 IBR (a decidir):** automatizar descarga+lectura del PDF mensual (frágil, requiere
   librería PDF en Actions, no testeable local) vs. actualización mensual asistida (leer el PDF
   nuevo y actualizar `ibr.json` a mano). Después sigue la **Etapa 2b (notificaciones push)**.
@@ -176,3 +180,21 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
   no haya overflow real (scrollWidth=375=clientWidth → correcto). Borrar `_probe.html` al terminar.
 - **`.source-banner` es un `<button>`, no un `<a>`:** necesita `width:100%;border:0;text-align:left`
   explícitos, porque los botones no heredan ancho ni alineación (se corrigió el 2026-10-12).
+- **Leer los PDF del IBR: usar `tools/pdf-table.ps1`, NO Word COM.** El método viejo (Word COM)
+  se colgó: 200s de CPU sin producir nada, incluso con `DisableConvertPdfWarning=1`. El script
+  nuevo extrae el texto con posiciones usando solo .NET (sin Node, Python ni poppler):
+  descomprime los streams FlateDecode del PDF y parsea los operadores `Tm`/`Td`/`Tj`/`TJ`,
+  emitiendo `pagina<TAB>y<TAB>x<TAB>texto`. Uso:
+  `powershell -File tools\pdf-table.ps1 -Path IBR.pdf -Out salida.txt`
+  Después se agrupan las filas por coordenada `y` (tolerancia ~0.8) y se ordenan por `x`.
+  Trampas ya resueltas dentro del script:
+  - En PowerShell `$Out` y `$out` **son la misma variable** (no distingue mayúsculas) — por eso
+    la lista se llama `$rows`.
+  - Formatear con `{0:F1}` usa el locale español y escribe decimales con **coma**, lo que rompe
+    el orden numérico; hay que usar `InvariantCulture`.
+  - **No filtrar los streams por `BT`**: las tablas del IBR viven en streams que no contienen
+    `BT` (el objeto de texto empieza en otro stream). Filtrar por `BT` perdía tablas completas.
+  - Los streams que fallan al descomprimir son metadata XML e imágenes JPEG — es esperado.
+  - Los PDF mensuales se bajan de `https://landmark-cap.com/hubfs/Articulos%20diario%20financiero/IBR%20<Mes>%202026.pdf`
+    (ojo: el mes va capitalizado en unos meses y en minúscula en otros; sacar la URL exacta
+    del artículo `articulo-NNNN`).
