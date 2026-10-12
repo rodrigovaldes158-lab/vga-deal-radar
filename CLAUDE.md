@@ -49,10 +49,16 @@ fuentes públicas. Mismo nombre y logo que el sitio web de VGA.
   gráfica), **principales transacciones** (las 5 siguientes por monto, con miniatura) y dos
   tarjetas de navegación al detalle (Informe IB y Radar de noticias). Los listados de detalle
   quedaron exactamente como estaban.
-  **Las "imágenes" son SVG generados en `app.js`** (`coverSvg`/`glyph`/`THEMES`): un degradado
-  por familia de sector + una figura abstracta. Se hizo así a propósito — nada externo, así la
-  PWA sigue funcionando offline y el service worker no tiene que cachear binarios nuevos.
-  Para agregar un sector nuevo basta tocar `themeFor()`.
+  **Las portadas son fotos reales por sector** en `assets/sectores/<clave>.jpg` (12 claves, ver
+  `sectorKey()` en `app.js`), con un degradado
+  SVG + figura abstracta por detrás como respaldo si la foto aún no está cacheada. Están **dentro
+  del repo** (no se piden a ningún servicio externo), así la
+  PWA sigue funcionando offline; van en el precache de `sw.js` (~574 KB en total).
+  Tratamiento visual: `saturate(.55)` + lavado navy/teal por encima (`.cover-img` / `.cover-tint`
+  en `styles.css`). Se probó un duotono fuerte con `mix-blend-mode:color` y se descartó: dejaba
+  minería e inmobiliario indistinguibles. Para agregar un sector: foto nueva en
+  `assets/sectores/`, entrada en `SECTORS`, regla en `sectorKey()` y alta en el precache de `sw.js`.
+  Procedencia y licencia de cada foto: `assets/sectores/CREDITS.md`.
 - **Etapa 2b (notificaciones push): PRÓXIMA TAREA.** Ver "Etapa 2b" abajo.
 
 ## Decisiones cerradas (no cambiar sin pedir al usuario)
@@ -212,3 +218,12 @@ Tipografías: Inter Tight (texto) + JetBrains Mono (datos). El logo son **dos pu
   - Los PDF mensuales se bajan de `https://landmark-cap.com/hubfs/Articulos%20diario%20financiero/IBR%20<Mes>%202026.pdf`
     (ojo: el mes va capitalizado en unos meses y en minúscula en otros; sacar la URL exacta
     del artículo `articulo-NNNN`).
+- **Fotos de Unsplash: el HTTP 403 significa "Unsplash+ de pago", no rate limit.** Al bajar con
+  `https://unsplash.com/photos/<id>/download?w=1200`, las fotos premium devuelven 403 y **no se
+  pueden usar**. Se pierde tiempo si se interpreta como límite de peticiones y se reintenta: hay
+  que elegir otra foto. Los resultados de búsqueda mezclan gratuitas y premium sin distinguirlas.
+- **Optimizar imágenes sin ImageMagick:** `System.Drawing` desde PowerShell (recorte centrado +
+  `HighQualityBicubic` + JPEG con `EncoderParameter` de calidad). A 720×450 y calidad 70 las fotos
+  quedan en 27–78 KB. Sirve también para armar un mosaico de contactos y revisarlas todas de una.
+- **`serve.ps1` solo conoce los MIME que tiene en su tabla**: se le agregó `.jpg/.jpeg/.webp`
+  (antes servía los JPEG como `application/octet-stream`). GitHub Pages sí los sirve bien.

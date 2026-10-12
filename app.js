@@ -87,24 +87,37 @@
   // Generated inline SVG, one theme per sector family. No external images, so
   // the app keeps working offline and nothing extra has to be cached.
   var gradSeq = 0;
-  var THEMES = {
-    peaks:  { a: "#0B1F3A", b: "#1E5F74" },
-    bolt:   { a: "#0C4A43", b: "#14B8A6" },
-    blocks: { a: "#13233F", b: "#425C7A" },
-    pulse:  { a: "#0E3A4A", b: "#17A2B8" },
-    nodes:  { a: "#152B52", b: "#4F6BA8" },
-    bars:   { a: "#0B1F3A", b: "#2C7A7B" },
-    waves:  { a: "#0A2E4A", b: "#2B8CA8" }
+  // Each sector key has a photo in assets/sectores/<key>.jpg plus a gradient +
+  // glyph that shows through if the photo has not been cached yet.
+  var SECTORS = {
+    mineria:      { glyph: "peaks",  a: "#0B1F3A", b: "#1E5F74" },
+    energia:      { glyph: "bolt",   a: "#0C4A43", b: "#14B8A6" },
+    agro:         { glyph: "peaks",  a: "#11331F", b: "#4E8C4A" },
+    inmobiliario: { glyph: "blocks", a: "#13233F", b: "#425C7A" },
+    industrial:   { glyph: "blocks", a: "#2A1F1A", b: "#8A5A3B" },
+    salud:        { glyph: "pulse",  a: "#0E3A4A", b: "#17A2B8" },
+    tecnologia:   { glyph: "nodes",  a: "#152B52", b: "#4F6BA8" },
+    educacion:    { glyph: "nodes",  a: "#1A2440", b: "#5A6E9A" },
+    portuario:    { glyph: "waves",  a: "#0A2E4A", b: "#2B8CA8" },
+    aerolineas:   { glyph: "waves",  a: "#102A46", b: "#3E7FA8" },
+    retail:       { glyph: "bars",   a: "#2B1C3A", b: "#7A5A9A" },
+    financiero:   { glyph: "bars",   a: "#0B1F3A", b: "#2C7A7B" }
   };
-  function themeFor(sector) {
+  // Order matters: "Alimentos" must land on agro before "consumo/retail" is tested.
+  function sectorKey(sector) {
     var s = (sector || "").toLowerCase();
-    if (/miner|forest|agr|litio/.test(s)) return "peaks";
-    if (/energ|transmis/.test(s)) return "bolt";
-    if (/inmobil|industrial|hotel|acero|construc/.test(s)) return "blocks";
-    if (/salud|farmac|sanitar/.test(s)) return "pulse";
-    if (/tecnolog|medios|educac/.test(s)) return "nodes";
-    if (/portuar|log|aerol|aliment|consumo|retail/.test(s)) return "waves";
-    return "bars";
+    if (/miner|litio/.test(s)) return "mineria";
+    if (/energ|transmis/.test(s)) return "energia";
+    if (/forest|agr|aliment/.test(s)) return "agro";
+    if (/inmobil|hotel|construc/.test(s)) return "inmobiliario";
+    if (/industrial|acero/.test(s)) return "industrial";
+    if (/salud|farmac|sanitar/.test(s)) return "salud";
+    if (/tecnolog|medios/.test(s)) return "tecnologia";
+    if (/educac/.test(s)) return "educacion";
+    if (/portuar|log/.test(s)) return "portuario";
+    if (/aerol/.test(s)) return "aerolineas";
+    if (/consumo|retail|deporte/.test(s)) return "retail";
+    return "financiero";
   }
   function glyph(kind) {
     switch (kind) {
@@ -137,16 +150,18 @@
     }
   }
   function coverSvg(sector) {
-    var kind = themeFor(sector);
-    var t = THEMES[kind];
+    var key = sectorKey(sector);
+    var t = SECTORS[key];
     var id = "g" + (++gradSeq);
     return '<svg class="cover" viewBox="0 0 160 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true">' +
              '<defs><linearGradient id="' + id + '" x1="0" y1="0" x2="1" y2="1">' +
                '<stop offset="0" stop-color="' + t.a + '"/><stop offset="1" stop-color="' + t.b + '"/>' +
              '</linearGradient></defs>' +
              '<rect width="160" height="100" fill="url(#' + id + ')"/>' +
-             glyph(kind) +
-           "</svg>";
+             glyph(t.glyph) +
+           "</svg>" +
+           '<img class="cover-img" src="assets/sectores/' + key + '.jpg" alt="" />' +
+           '<span class="cover-tint"></span>';
   }
 
   // ---- Navigation ----

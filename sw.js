@@ -1,7 +1,7 @@
 /* VGA — Deal Radar · service worker
    App-shell caching so the app opens offline. Deal data is fetched
    network-first so the list stays fresh when online. */
-var CACHE = "vga-deal-radar-v5";
+var CACHE = "vga-deal-radar-v6";
 var SHELL = [
   "./",
   "./index.html",
@@ -11,7 +11,19 @@ var SHELL = [
   "./assets/vga_mark.svg",
   "./assets/vga_mark_reverse.svg",
   "./icons/icon-192.png",
-  "./icons/icon-512.png"
+  "./icons/icon-512.png",
+  "./assets/sectores/mineria.jpg",
+  "./assets/sectores/energia.jpg",
+  "./assets/sectores/agro.jpg",
+  "./assets/sectores/inmobiliario.jpg",
+  "./assets/sectores/industrial.jpg",
+  "./assets/sectores/salud.jpg",
+  "./assets/sectores/tecnologia.jpg",
+  "./assets/sectores/educacion.jpg",
+  "./assets/sectores/portuario.jpg",
+  "./assets/sectores/aerolineas.jpg",
+  "./assets/sectores/retail.jpg",
+  "./assets/sectores/financiero.jpg"
 ];
 
 self.addEventListener("install", function (e) {
