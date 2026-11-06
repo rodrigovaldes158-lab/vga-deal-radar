@@ -1,10 +1,15 @@
 {
-  "checkedAt": "2026-11-05T18:21:28.637Z",
+  "checkedAt": "2026-11-06T17:43:51.220Z",
   "latestKnown": {
     "month": "Agosto 2026",
     "article": 2520,
     "url": "https://landmark-cap.com/diario-financiero/articulo-2520?hsLang=es"
   },
-  "found": null,
+  "found": {
+    "month": "Septiembre 2026",
+    "via": "pdf",
+    "url": "https://landmark-cap.com/hubfs/Articulos%20diario%20financiero/IBR%20septiembre%202026.pdf",
+    "firstSeen": "2026-11-06T17:43:51.220Z"
+  },
   "note": "Lo escribe tools/check-ibr.mjs a diario. 'found' es un informe de Landmark más nuevo que 'latestKnown', aún no incorporado a ibr.json. Al incorporarlo, actualizar latestKnown y dejar found en null."
 }
